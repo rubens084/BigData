@@ -1,0 +1,24 @@
+Pearson's Correlation
+
+
+In statistics, Pearson's correlation coefficient is a linear measure between
+two quantitative random variables. Unlike covariance, Pearson's correlation
+is independent of the scale of measurement of the variables.
+A Pearson correlation is a number between -1 and 1 that indicates the extent
+ to which two variables are linearly related. The Pearson correlation is also 
+ known as the “product moment correlation coefficient” (PMCC) or simply “correlation”.
+ 
+ 
+ .(a) ----------------------------------------------.(b)
+     -
+       -
+          -
+              -
+                  -
+                      -   
+                        -   
+                             .(c)
+
+it is used to group data, in this case we have 3 points a, b, c where group a is a type
+of color like red and b is another type like green to which color does c belong if we 
+go in the distance at a smaller distance is the one that belongs
