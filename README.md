@@ -13,5 +13,6 @@
 
 <br><strong>Docente: Dr. Jose Christian Romero Hernandez</strong>
 </p>
+</p align="center">
 
 
