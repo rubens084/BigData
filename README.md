@@ -16,31 +16,30 @@
 <h1>Practices</h1>
 <h4>Instructions</h4>
 <h4>#1</h4>
-<ol>
+
 <li>Develop an algorithm in scala that calculates the radius of a circle.
 <li> simple operations, where the radius of a 15cm circle is obtained, with the formula diameter / 2 * pi
-<li>print("Circulo de 15cm ")     
-<li>15/(2*3.1416)
+print("Circulo de 15cm ")     
+15/(2*3.1416)
 <li>Develop an algorithm in scala that tells me if a number is a prime number.
 <li>Given the variable bird = "tweet", use string interpolation to print "I am writing a tweet".
-  <li> val bird = "Tweet"
-<li>val greet = s"Estoy escribiendo en $bird"
+   val bird = "Tweet"
+val greet = s"Estoy escribiendo en $bird"
   <li>play with variables that contains a word where you add it in which phrase
 <li>Given the variable message = "Hola Luke soy tu padre!" use slilce to extract the sequence "Luke".
   <li>using the st slice you can cut part of a phrase or a word giving the parameters
-  <li>val st = "Hola Luke yo soy tu padre!"
-<li>st slice  (5,8)
+ val st = "Hola Luke yo soy tu padre!"
+st slice  (5,8)
 <li> What is the difference of a value and a variable in scala ?.
-  <li> Variables in scala
-<li> Values ​​(val) are immutable, once assigned
-<li> cannot be changed.
-<li> Variables (var) can be reallocated.
-<li> Note, when reassigning you must use the same type of data!
+   Variables in scala
+ Values ​​(val) are immutable, once assigned cannot be changed.
+ Variables (var) can be reallocated.
+ Note, when reassigning you must use the same type of data!
 <li>Given the tuple (2,4,5,1,2,3,3.1416,23) return the number 3.1416.
   <li>in a number array using._ you can extract a particular number
-  <li>val my_tup = (2,4,5,1,2,3,3.1416,23)
-<li>my_tup._7
-</ol>
+  val my_tup = (2,4,5,1,2,3,3.1416,23)
+my_tup._7
+
 
 <h4>Instructions</h4>
 <h4>#2</h4>
