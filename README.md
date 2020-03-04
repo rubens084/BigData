@@ -15,8 +15,8 @@
 <br><strong>Docente: Dr. Jose Christian Romero Hernandez</strong>
 </p>
 
-<h4>Practica 1</h4>
-<a href="https://github.com/rubens084/Bigdata/blob/Unidad1/Tareas/Practica1.scala ">hgjghgjhgj</a>
+
+<a href="https://github.com/rubens084/Bigdata/blob/Unidad1/Tareas/Practica1.scala ">Practica 1</a>
 
 <li>Develop an algorithm in scala that calculates the radius of a circle.
 <li> simple operations, where the radius of a 15cm circle is obtained, with the formula diameter / 2 * pi
@@ -45,8 +45,9 @@ st slice  (5,8)
   val my_tup = (2,4,5,1,2,3,3.1416,23)
 my_tup._7
 
-<h4>Practica 2</h4>
 
+
+<a href="https://github.com/rubens084/Bigdata/blob/Unidad1/Tareas/Practica2.scala ">Practica 2</a>
 
 <li>1. Create a list called "list" with the elements "red", "white", "black"
   <li> a list is created with val and the name by entering the data in this list
@@ -82,7 +83,8 @@ list2.toSet
 
 
 
-<h4>Pearson's Correlation</h4>
+<a href="https://github.com/rubens084/Bigdata/blob/Unidad1/Tareas/Pearson%20correlation.txt ">Pearson's Correlation</a>
+
 
 <li>In statistics, Pearson's correlation coefficient is a linear measure between
 <li>two quantitative random variables. Unlike covariance, Pearson's correlation
@@ -108,7 +110,7 @@ list2.toSet
    
    
 
-<h4>The Fibonacci sequence</h4>
+<a href="https://github.com/rubens084/Bigdata/blob/Unidad1/Tareas/fibonacci.scala">The Fibonacci sequence</a>
 
 <li>The Fibonacci sequence is, by definition, the integer sequence in which 
 <li>every number after the first two is the sum of the two preceding numbers.
@@ -241,6 +243,7 @@ return (a + b)}}function5 (9)
 
 
 <h4>Group by</h4>
+<a href="https://github.com/rubens084/Bigdata/blob/Unidad1/Tareas/TareaGroupBy.scala">Group by</a>
 
 <li>Preparing Data & DataFrame
 <li>Before, we start let’s create the DataFrame from a sequence of the data to work with.
