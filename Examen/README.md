@@ -17,7 +17,7 @@
 
 
 
-<a https://github.com/rubens084/Bigdata/blob/Unidad1/Examen/Examen.scala">Examn 1 </a>
+<a "https://github.com/rubens084/Bigdata/blob/Unidad1/Examen/Examen.scala">Examn 1 </a>
 
 <li>An array of 3-story numbers is generated which must be declared, subsequently
 <li>define tuples to be able to continue with the exercise. it is necessary to take diagonally the
@@ -40,7 +40,7 @@ Sumadiagonales(arre)
 
 
 
-<a https://github.com/rubens084/Bigdata/blob/Unidad1/Examen/ExamenU1-2.scala ">Examn 2 </a>
+<a "https://github.com/rubens084/Bigdata/blob/Unidad1/Examen/ExamenU1-2.scala ">Examn 2 </a>
                                
 <li>The entry point to programming Spark with the Dataset and DataFrame API                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.SparkSession   
