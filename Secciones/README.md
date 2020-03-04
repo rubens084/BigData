@@ -155,7 +155,7 @@ x slice (0,3)
 x slice (3, 6)
 
 /////////////////////////////////////////////
-<a https://github.com/rubens084/Bigdata/blob/Unidad1/Secciones/Seccion_3.scala">Practica 3</a>
+<a href=" https://github.com/rubens084/Bigdata/blob/Unidad1/Secciones/Seccion_3.scala">Practica 3</a>
 
 
 @@ -44,4 +44,8 @@ my_list.product
@@ -223,7 +223,7 @@ mutmap.keys
 mutmap.values
 
 ////////////////////////////////////////////////////////////
-<a https://github.com/rubens084/Bigdata/blob/Unidad1/Secciones/Seccion_4.scala">Practica 4</a>
+<a href="https://github.com/rubens084/Bigdata/blob/Unidad1/Secciones/Seccion_4.scala">Practica 4</a>
 
 <li>Control Flow
 <li>if, else if, and else
@@ -311,8 +311,8 @@ for(name <- names){
         println(s"$name starts with a C")
     }
 }
-////////////////////////////////////////////////////////////////
-<a https://github.com/rubens084/Bigdata/blob/Unidad1/Secciones/Seccion_5.scala">Practica 5</a>
+
+<a href=" https://github.com/rubens084/Bigdata/blob/Unidad1/Secciones/Seccion_5.scala">Practica 5</a>
 
 <li>While loop 
 
@@ -378,7 +378,7 @@ def check(nums:List[Int]): List[Int]={
 
 println(check(numbers))
 
-<a https://github.com/rubens084/Bigdata/blob/Unidad1/Secciones/Seccion_6.scala">Practica 6</a>
+<a href=" https://github.com/rubens084/Bigdata/blob/Unidad1/Secciones/Seccion_6.scala">Practica 6</a>
 
  
 <li> def isEven(num:Int): Boolean = {
