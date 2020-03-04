@@ -252,54 +252,54 @@ function5 (9)
  <li> df.groupBy("Person").count().show(false)
   <li>df.groupBy("Person").avg("Sales").show(false)
   <li>df.groupBy("Person").sum("Sales").show(false)
-  df.groupBy("Person").min("Sales").show(false)
-  df.groupBy("Person").max("Sales").show(false)
-  df.groupBy("Person").mean("Sales").show(false)
+ <li> df.groupBy("Person").min("Sales").show(false)
+ <li> df.groupBy("Person").max("Sales").show(false)
+ <li> df.groupBy("Person").mean("Sales").show(false)
 
-  //GroupBy on multiple columns
-  df.groupBy("Company", "Person")
-    .sum("Sales","Sales")
-    .show(false)
-  df.groupBy("department","state")
-    .avg("salary","bonus")
-    .show(false)
-  df.groupBy("department","state")
-    .max("salary","bonus")
-    .show(false)
-  df.groupBy("department","state")
-    .min("salary","bonus")
-    .show(false)
-  df.groupBy("department","state")
-    .mean("salary","bonus")
-    .show(false)
+  <li>//GroupBy on multiple columns
+ <li> df.groupBy("Company", "Person")
+   <li> .sum("Sales","Sales")
+  <li>  .show(false)
+ <li> df.groupBy("department","state")
+   <li> .avg("salary","bonus")
+   <li> .show(false)
+ <li> df.groupBy("department","state")
+  <li>  .max("salary","bonus")
+   <li> .show(false)
+ <li> df.groupBy("department","state")
+   <li> .min("salary","bonus")
+   <li> .show(false)
+ <li> df.groupBy("department","state")
+  <li>  .mean("salary","bonus")
+   <li> .show(false)
 
-    //Running Filter
-  df.groupBy("department","state")
-    .sum("salary","bonus")
-    .show(false)
+  <li>  //Running Filter
+ <li> df.groupBy("department","state")
+  <li>  .sum("salary","bonus")
+  <li>  .show(false)
 
-     //using agg function
-  df.groupBy("Company")
-    .agg(
-      sum("Person").as("sum_salary"),
-      avg("Person").as("avg_salary"),
-      sum("Sales").as("sum_bonus"),
-      max("Sales").as("max_bonus"))
-    .show(false)
+  <li>   //using agg function
+ <li> df.groupBy("Company")
+  <li>  .agg(
+    <li>  sum("Person").as("sum_salary"),
+    <li>  avg("Person").as("avg_salary"),
+    <li>  sum("Sales").as("sum_bonus"),
+   <li>   max("Sales").as("max_bonus"))
+ <li>   .show(false)
 
- df.groupBy("Company")
-    .agg( sum("Person").as("sum_salary")).show(false)
-
-
+<li> df.groupBy("Company")
+   <li> .agg( sum("Person").as("sum_salary")).show(false)
 
 
-  df.groupBy("department")
-    .agg(
-      sum("salary").as("sum_salary"),
-      avg("salary").as("avg_salary"),
-      sum("bonus").as("sum_bonus"),
-      stddev("bonus").as("stddev_bonus"))
-    .where(col("sum_bonus") > 50000)
-    .show(false)
-}
+
+
+<li>  df.groupBy("department")
+  <li>  .agg(
+     <li> sum("salary").as("sum_salary"),
+     <li> avg("salary").as("avg_salary"),
+     <li> sum("bonus").as("sum_bonus"),
+     <li> stddev("bonus").as("stddev_bonus"))
+   <li> .where(col("sum_bonus") > 50000)
+  <li>  .show(false)
+<li> }
    
