@@ -291,8 +291,6 @@ function5 (9)
    <li> .agg( sum("Person").as("sum_salary")).show(false)
 
 
-
-
 <li>  df.groupBy("department")
   <li>  .agg(
      <li> sum("salary").as("sum_salary"),
