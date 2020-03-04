@@ -109,7 +109,7 @@ st slice (0.4)
 
 
 <a href="https://github.com/rubens084/Bigdata/blob/Unidad1/Secciones/Seccion_2.scala">Practica 2</a>
-/////////////////////////////////////////
+
 val st = "item1 item2 item3"
 se matches "item1 item2 item3" //res0: Boolean = false
 st matches "item2" //res1: Boolean = true
