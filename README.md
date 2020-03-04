@@ -16,7 +16,7 @@
 </p>
 
 <h4>Practica 1</h4>
-<a href="#https://github.com/rubens084/Bigdata/blob/Unidad1/Tareas/Practica1.scala ">hgjghgjhgj</a>
+<a href="https://github.com/rubens084/Bigdata/blob/Unidad1/Tareas/Practica1.scala ">hgjghgjhgj</a>
 
 <li>Develop an algorithm in scala that calculates the radius of a circle.
 <li> simple operations, where the radius of a 15cm circle is obtained, with the formula diameter / 2 * pi
