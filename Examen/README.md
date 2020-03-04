@@ -1,3 +1,21 @@
+# Bigdata
+<br><strong>Unidad1</strong>
+<p align="center">
+<br><strong>Tecnológico Nacional de México</strong>
+<br><strong>Instituto Tecnológico de Tijuana</strong>
+<br><strong>Subdirección académica</strong>
+<br><strong>Departamento de Sistemas y Computación</strong>
+<br><strong>Semestre: ENERO - JUNIO 2020</strong>
+<br><strong>Ingeniería en Tecnologías de la Información y Comunicaciones</strong>
+<br><strong>Ingeniería Informatica</strong>
+<br><strong>Materia: Datos Masivos</strong>
+<br><strong>Unidad: 1</strong>
+<br><strong>Dorado Aguilus Ruben #15210328</strong>
+   <br><strong>Mejia Manriquez Rocio #14212336</strong>
+<br><strong>Docente: Dr. Jose Christian Romero Hernandez</strong>
+</p>
+
+
 
 <a https://github.com/rubens084/Bigdata/blob/Unidad1/Examen/Examen.scala">Examn 1 </a>
 
