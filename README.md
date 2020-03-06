@@ -112,7 +112,28 @@ list2.toSet
 
 <a href="https://github.com/rubens084/Bigdata/blob/Unidad1/Tareas/Pearson%20correlation.txt ">Pearson's Correlation</a>
 
+<li>In statistics, Pearson's correlation coefficient is a linear measure between
+<li>two quantitative random variables. Unlike covariance, Pearson's correlation
+<li>is independent of the scale of measurement of the variables.
+<li>A Pearson correlation is a number between -1 and 1 that indicates the extent
+ <li>to which two variables are linearly related. The Pearson correlation is also 
+ <li>known as the “product moment correlation coefficient” (PMCC) or simply “correlation”.
+ <li>
+ <li>
+ <li><li>.(a) ----------------------------------------------.(b)
+     <li<li>>-
+       <li><li>-
+          <li>-
+              <li><li>-
+                 <li><li> -
+                      <li>-   
+                     <li> <li>  -   
+                         <li><li>    .(c)
 
+<li><li>it is used to group data, in this case we have 3 points a, b, c where group a is a type
+<li>color like red and b is another type like green to which color does c belong if we 
+<li>go in the distance at a smaller distance is the one that belongs
+   
 
    
 
