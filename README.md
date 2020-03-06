@@ -77,7 +77,36 @@ my_tup._7
 <a href="https://github.com/rubens084/Bigdata/blob/Unidad1/Tareas/Practica2.scala ">Practica 2</a>
 
 
+    <li>1. Create a list called "list" with the elements "red", "white", "black"
+  <li> a list is created with val and the name by entering the data in this list
+   val lista = List("rojo","blanco","negro")
+ 
+ <li> 2. Add 5 more items to "list" "green", "yellow", "blue", "orange", "pearl"
+  <li> to add more data to the list, just add at the end of it the data you want to enter
+ val lista = List("rojo","blanco","negro","verde","amarillo","azul","naranja","perla")
+
+<li> 3. Bring the "list" "green", "yellow", "blue" items
+<li> we use slice again to take part in the list
+    lista slice (3,6)
+  
+  <li>4. Create a number array in the 1-1000 range in 5-in-5 steps
+   <li>creating an arrangement is defined as fix.range and where it starts and where it 
+     <li>ends and how much the jumps will be
+   Array.range(1,1000, 5)
+   
+   <li>5. What are the unique elements of the List list (1,3,3,4,6,7,3,7) use conversion to sets
+ var list2=List(1,3,3,4,6,7,3,7)
+list2.toSet
+<li>6. Create a mutable map called names containing the following
+  <li>"Jose", 20, "Luis", 24, "Ana", 23, "Susana", "27"
+ val names = collection.mutable.Map(("Jose", 20), ("Luis", 24), ("Ana", 23),("Susana",27))
+ 
+ <li> 6 a. Print all map keys
+    names.keys
     
+ <li>  b. Add the following value to the map ("Miguel", 23)
+    names += ("Miguel" -> 23)
+        
 
 
 
