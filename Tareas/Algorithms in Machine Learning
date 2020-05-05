@@ -1,5 +1,9 @@
-Machine learning algorithms can be divided into three broad categories: supervised learning, unsupervised learning, and reinforcement learning. Supervised learning is useful in cases where a property (label) is available for a given data set (training set), but must be predicted for other instances. Unsupervised learning is useful in cases where the challenge is to uncover implicit relationships in an unlabelled dataset (elements are not previously assigned). 
-Reinforcement learning falls between these two extremes: there is some form of feedback available for each step or predictive action, but there is no precise label or error message.
+Machine learning algorithms can be divided into three broad categories: supervised learning, unsupervised learning, 
+and reinforcement learning. Supervised learning is useful in cases where a property (label) is available for a given data set 
+(training set), but must be predicted for other instances. Unsupervised learning is useful in cases where the challenge is to 
+uncover implicit relationships in an unlabelled dataset (elements are not previously assigned). 
+Reinforcement learning falls between these two extremes: there is some form of feedback available for each step or predictive 
+action, but there is no precise label or error message.
 
  
 
