@@ -1,3 +1,5 @@
+Algorithms in Machine Learning.
+
 Machine learning algorithms can be divided into three broad categories: supervised learning, unsupervised learning, 
 and reinforcement learning. Supervised learning is useful in cases where a property (label) is available for a given data set 
 (training set), but must be predicted for other instances. Unsupervised learning is useful in cases where the challenge is to 
@@ -9,8 +11,11 @@ action, but there is no precise label or error message.
 
 SUPERVISED LEARNING
 
-1. Decision trees: A decision tree is a decision support tool that uses a graph or model similar to a decision tree and its possible consequences, including the results of fortuitous events, resource costs, and utility .
-From a business decision-making point of view, a decision tree is the minimum number of yes / no questions that one has to ask, to assess the probability of making a correct decision, most of the time. This method allows you to approach the problem in a structured and systematic way to reach a logical conclusion.
+1. Decision trees: A decision tree is a decision support tool that uses a graph or model similar to a decision tree and 
+its possible consequences, including the results of fortuitous events, resource costs, and utility .
+From a business decision-making point of view, a decision tree is the minimum number of yes / no 
+questions that one has to ask, to assess the probability of making a correct decision, most of the time. 
+This method allows you to approach the problem in a structured and systematic way to reach a logical conclusion.
 
 2. Naïve Bayes Classification: Naïve Bayes classifiers are a family of simple probabilistic classifiers based on the application of Bayes ‘theorem with strong (Naïve) assumptions of independence between characteristics’. The featured image is the equation - with P (A | B) being posterior probability, P (B | A) being probability, P (A) being class prior probability, and P (B) being prior probability predictor.
 3. Ordinary Least Squares Regression: Si has estado en contacto con la estadística, probablemente hayas oído hablar de regresión lineal antes. Ordinary Least Squares Regression es un método para realizar la regresión lineal. Se puede pensar en la regresión lineal como la tarea de ajustar una línea recta a través de un conjunto de puntos. Hay varias estrategias posibles para hacer esto, y la estrategia de «mínimos cuadrados ordinarios» va así: puede dibujar una línea y luego, para cada uno de los puntos de datos, medir la distancia vertical entre el punto y la línea y sumarlos; La línea ajustada sería aquella en la que esta suma de distancias sea lo más pequeña posible.
