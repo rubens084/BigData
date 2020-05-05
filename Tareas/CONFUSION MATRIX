@@ -1,0 +1,49 @@
+CONFUSION MATRIX.
+
+A confusion matrix can be used to evaluate a classifier, based on a set of test data for which the actual values 
+are known. It is a simple tool that helps provide a good overview of the performance of the algorithm being used.
+
+EXAMPLE:
+
+We will start with importing all the libraries needed throughout .
+
+import org.apache.spark.ml.classification.{LogisticRegression => LogR}
+import org.apache.spark.ml.feature.{VectorAssembler => VA, StringIndexer => SI, OneHotEncoder => OHE, VectorIndexer}
+import org.apache.spark.ml.{Pipeline => PL}
+import org.apache.spark.ml.evaluation.{MulticlassClassificationEvaluator => MCE}
+import org.apache.spark.ml.linalg.{Matrix => MX, Matrices => MS, Vectors}
+val file_name = "/path/to/local/file.csv"
+val df = spark.read.option("header", "true").option("inferSchema", "true").csv(file_name)
+df.cache 
+val new_df = df.select(df("label"), $"featureA", $"featureB", $"featureC")
+al genIndexer = new SI().setInputCol("featureA").setOutputCol("featureAindex")
+val genEncoder = new OHE().setInputCol("featureAindex").setOutputCol("featureAencoded")
+val df_vector = new VA().setInputCols(Array("featureAencoded", "featureB", "featureC")).setOutputCol("features")
+val logReg = new LogR()
+val pipeline = new PL().setStages(Array(genIndexer, genEncoder, df_vector, logReg))
+al model = pipeline.fit(training)
+val results = model.transform(test)
+val eval = new MCE().setLabelCol("label").setPredictionCol("prediction")
+
+println(s"Accuracy: ${eval.setMetricName("accuracy").evaluate(results)}")
+println(s"Precision: ${eval.setMetricName("weightedPrecision").evaluate(results)}")
+println(s"Recall: ${eval.setMetricName("weightedRecall").evaluate(results)}")
+println(s"F1: ${eval.setMetricName("f1").evaluate(results)}")
+val TP = results.select("label", "prediction").filter("label = 0 and prediction = 0").count
+val TN = results.select("label", "prediction").filter("label = 1 and prediction = 1").count
+val FP = results.select("label", "prediction").filter("label = 0 and prediction = 1").count
+val FN = results.select("label", "prediction").filter("label = 1 and prediction = 0").count
+val total = results.select("label").count.toDouble
+
+val confusion: MX = MS.dense(2, 2, Array(TP, FN, FP, TN))
+
+val accuracy	= (TP + TN) / total
+val precision   = (TP + FP) / total
+val recall      = (TP + FN) / total
+val F1		= 2/(1/precision + 1/recall)
+import org.apache.spark.mllib.evaluation.{MulticlassMetrics => MM }
+
+val eval_rdd =  results.select($"prediction",$"label").as[(Double, Double)].rdd
+val eval = new MM(eval_rdd)
+
+println(eval.confusionMatrix)
