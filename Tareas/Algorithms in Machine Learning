@@ -22,6 +22,38 @@ In terms of scale, some of the biggest problems that have been solved using SVMs
 
 6. Ensemble Methods: Ensemble methods are learning algorithms that build a set of classifiers and then classify new data points by taking a weighted vote of their predictions. The original set method is Bayesian averaging, but the latest algorithms include encoding output correction error.
 
+EXAMPLE:
+Supervised learning version:
+
+    def get_dummy(df,indexCol,categoricalCols,continuousCols,labelCol):
+
+        from pyspark.ml import Pipeline
+        from pyspark.ml.feature import StringIndexer, OneHotEncoder, VectorAssembler
+        from pyspark.sql.functions import col
+
+        indexers = [ StringIndexer(inputCol=c, outputCol="{0}_indexed".format(c))
+                     for c in categoricalCols ]
+
+        # default setting: dropLast=True
+        encoders = [ OneHotEncoder(inputCol=indexer.getOutputCol(),
+                     outputCol="{0}_encoded".format(indexer.getOutputCol()))
+                     for indexer in indexers ]
+
+        assembler = VectorAssembler(inputCols=[encoder.getOutputCol() for encoder in encoders]
+                                    + continuousCols, outputCol="features")
+
+        pipeline = Pipeline(stages=indexers + encoders + [assembler])
+
+        model=pipeline.fit(df)
+        data = model.transform(df)
+
+        data = data.withColumn('label',col(labelCol))
+
+        if indexCol:
+            return data.select(indexCol,'features','label')
+        else:
+            return data.select('features','label')
+
 
 UNSUPERVISED LEARNING
 
@@ -45,3 +77,36 @@ Some of the PCA applications include compression, data simplification for easier
  
 
 ICA is related to PCA, but it is a much more powerful technique that is able to find the underlying factors of sources when these classic methods fail completely. Its applications include digital images, document databases, economic indicators and psychometric measurements.
+EXAMPLE:
+ef get_dummy(df,indexCol,categoricalCols,continuousCols):
+    '''
+    Get dummy variables and concat with continuous variables for unsupervised learning.
+    :param df: the dataframe
+    :param categoricalCols: the name list of the categorical data
+    :param continuousCols:  the name list of the numerical data
+    :return k: feature matrix
+
+    :author: Wenqiang Feng
+    :email:  von198@gmail.com
+    '''
+
+    indexers = [ StringIndexer(inputCol=c, outputCol="{0}_indexed".format(c))
+                 for c in categoricalCols ]
+
+    # default setting: dropLast=True
+    encoders = [ OneHotEncoder(inputCol=indexer.getOutputCol(),
+                 outputCol="{0}_encoded".format(indexer.getOutputCol()))
+                 for indexer in indexers ]
+
+    assembler = VectorAssembler(inputCols=[encoder.getOutputCol() for encoder in encoders]
+                                + continuousCols, outputCol="features")
+
+    pipeline = Pipeline(stages=indexers + encoders + [assembler])
+
+    model=pipeline.fit(df)
+    data = model.transform(df)
+
+    if indexCol:
+        return data.select(indexCol,'features')
+    else:
+        return data.select('features')
