@@ -45,5 +45,3 @@ Some of the PCA applications include compression, data simplification for easier
  
 
 ICA is related to PCA, but it is a much more powerful technique that is able to find the underlying factors of sources when these classic methods fail completely. Its applications include digital images, document databases, economic indicators and psychometric measurements.
-
-
