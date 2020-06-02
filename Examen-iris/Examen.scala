@@ -24,7 +24,10 @@ import org.apache.spark.ml.linalg.Vectors
 
 // Se cargan los datos del dataser iris.csv en la variable "data"
 val data  = spark.read.option("header","true").option("inferSchema", "true").format("csv").load("iris.csv")
-
+// Se eliminan los campos null suelta las filas que tienen nulo solo en la columna onlyColumnInOneColumnDataFrame.
+val dataClean = data.na.drop()
+//muestra el nombre de las columnas
+data.schema.names
 // Vemos el esquema para comprobar que todos los valores estan calsificados correctamente en el dataset
 data.printSchema()
 // se muestran los primeros 5 valores de la lista con sus datos en una tabla
@@ -33,11 +36,6 @@ data.show(5)
 // La información de metadatos incluye el nombre de la función, la clase de implementación y los detalles de uso. 
 // Si se especifica la opción EXTENDED opcional, la información básica de metadatos se devuelve junto con la información de uso extendida.
 data.describe().show
-
-// Se eliminan los campos null suelta las filas que tienen nulo solo en la columna onlyColumnInOneColumnDataFrame.
-val dataClean = data.na.drop()
-
-
 
 // Se declara un vector que se transforma los datos a la variable "features" Esta sección cubre algoritmos para trabajar con características, divididas aproximadamente en estos grupos:
 // Extracción: extracción de características de datos "en bruto", Transformación: escalar, convertir o modificar características
