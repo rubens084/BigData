@@ -17,6 +17,41 @@
 
 <li>
    <li>
+<li> Unidad2
+<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad2/Tareas ">TAREAS</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Tareas/regrecion.scala  ">Regrecion linial</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Tareas/PIPELINE ">Pipeline</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Tareas/CONFUSION%20MATRIX ">Confusion matrix</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Tareas/Algorithms%20in%20Machine%20Learning ">Algoritmos M.L</a>
+
+=======
+<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad1/Tareas ">Unidad: 1</a>
+<li>
+<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad1/Tareas ">TAREAS</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad1/Tareas/Practica1.scala  ">Practica 1</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad1/Tareas/Practica2.scala ">Practica 2</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad1/Tareas/Pearson%20correlation.txt ">Pearson</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad1/Tareas/fibonacci.scala ">Fibonacci</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad1/Tareas/TareaGroupBy.scala">Grup By</a>
+<li> master
+<li>
+   <li>
+<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad2">EXAMEN</a>
+<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad2/Examen-iris">Examen-iris</a>
+
+<li>
+   <li>
+<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad2/Exposiciones">Expociciones</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Exposiciones/LSVM.scala">Linear support vector machine</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Exposiciones/LR.scala">Logistic Regression</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Exposiciones/DT.scala">Decision Tree Classifier</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Exposiciones/MLP.scala">Multilayer perceptron classifier</a>
+
+
+<li>
+   <li>
+<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad2 ">Unidad: 2</a>
+<li>
 <li><a href="https://github.com/rubens084/Bigdata/tree/Unidad2/Tareas ">TAREAS</a>
 <li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Tareas/regrecion.scala  ">Regrecion linial</a>
 <li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Tareas/PIPELINE ">Pipeline</a>
@@ -35,6 +70,22 @@
 <li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Exposiciones/LR.scala">Logistic Regression</a>
 <li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Exposiciones/DT.scala">Decision Tree Classifier</a>
 <li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Exposiciones/MLP.scala">Multilayer perceptron classifier</a>
+
+<li>
+   <li>
+<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad3 ">Unidad: 3</a>
+<li>
+   <li>
+<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad3/Examen">EXAMEN</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad3/Examen/ExamenU3.scala">Wholesale customers</a>
+
+   <li>
+<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad4 ">Unidad: 4</a>
+<li>
+   <li>
+<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad4/Proyecto">Proyecto</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad4/Proyecto/Full.scala">Comparacion</a>
+
 
 
 <li>
@@ -136,4 +187,6 @@
 <li>
 <li>Se imprime el error del modelo
 <li>println(s"Test Error = ${(1.0 - accuracy)}")
+
+
 
