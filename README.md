@@ -16,41 +16,26 @@
 </p>
 
 ### Unidad3
- 
+
+This document contains exercises and practices of the kind of massive data taught in the technology of 
+Tijuana taught by Dr. Cristian Romero.
+the practices are taught in Spark in scala documents with a staggered learning system.
 
 
 
-<li>
-   <li>
+
 <li><a href="https://github.com/rubens084/Bigdata/tree/Unidad3 ">Unidad: 3</a>
 <li>
-   <li>
+<li>
 <li><a href="https://github.com/rubens084/Bigdata/tree/Unidad3/Examen">EXAMEN</a>
 <li><a href="https://github.com/rubens084/Bigdata/blob/Unidad3/Examen/ExamenU3.scala">Wholesale customers</a>
 
-   <li>
-<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad4 ">Unidad: 4</a>
-<li>
-   <li>
-<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad4/Proyecto">Proyecto</a>
-<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad4/Proyecto/Full.scala">Comparacion</a>
 
-
-
-<li>
-<li>
-<li>This document contains exercises and practices of the kind of massive data taught in the technology of 
-<li>Tijuana taught by Dr. Cristian Romero.
-<li>the practices are taught in Spark in scala documents with a staggered learning system.
-<li>
-   <li>
-
-
-<li>implement scala.Serializable, java.io.Closeable, Logging
-<li>The entry point to Spark programming with the Dataset and DataFrame API.
-<li>In environments this has been created in advance (eg REPL, notebooks)
+implement scala.Serializable, java.io.Closeable, Logging
+The entry point to Spark programming with the Dataset and DataFrame API.
+In environments this has been created in advance (eg REPL, notebooks)
 <li>import org.apache.spark.sql.SparkSession
-<li>
+
 <li>allows to hide some alerts
 <li>import org.apache.log4j._
 <li>Logger.getLogger("org").setLevel(Level.ERROR)
