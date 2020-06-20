@@ -32,11 +32,13 @@ the practices are taught in Spark in scala documents with a staggered learning s
 Implement scala.Serializable, java.io.Closeable, Logging
 The entry point to Spark programming with the Dataset and DataFrame API.
 In environments this has been created in advance (eg REPL, notebooks)
+```
 <li>import org.apache.spark.sql.SparkSession
 <li>allows to hide some alerts
 <li>import org.apache.log4j._
 <li>Logger.getLogger("org").setLevel(Level.ERROR)
 
+```
 Is useful when applications want to share a SparkContext.
 So yes, you can use it to share a SparkContext object between applications.
 Yes, you can reuse broadcast variables and temporary tables in all parts.
