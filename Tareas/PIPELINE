@@ -1,0 +1,78 @@
+Pipeline
+
+The Pipeline is the common code that will generate a model for any classification or regression problem
+
+They also generate codes for training and testing, transform data.
+
+The output of the entire process is a model object, which is persistent, can be saved and loaded for analysis.
+
+
+Some Pipeline Component
+
+scikit-learn: machine learning in Python
+
+spark-sklearn: scikit-learn integration package for Spark
+
+skflow: scikit-learn container for Google TensorFlow
+
+SciPy: scientific computing library for Python
+
+
+EXAMPLE: 
+from pyspark.ml import Pipeline
+from pyspark.ml.feature import VectorAssembler
+
+# Define the Spark df to use
+df = spark.createDataFrame ([
+    ('line_1', 1, 2, 3, 4),
+    ('line_2', 5, 6, 7, 8),
+    ('line_3', 9, 9, 9, 9)
+], ("label", "x1", "x2", "x3", "x4"))
+
+# Define an assembler for columns 'x1' and 'x2' and take 'features1' as output
+assembler12 = VectorAssembler (inputCols = ["x1", "x2"], outputCol = "features1")
+# Create the pipe
+pipeline12 = Pipeline ()
+# Define the stages of which the pipe is composed
+pipeline12.setStages ([assembler12])
+
+# Define an assembler for columns 'x3' and 'x4' and take 'features2' as output
+assembler34 = VectorAssembler (inputCols = ["x3", "x4"], outputCol = "features2")
+# Create the pipe
+pipeline34 = Pipeline ()
+# Define the stages of which the pipe is composed
+pipeline34.setStages ([assembler34])
+
+# Define an assembler of columns 'features1' and 'features2' and take 'features' as output
+assemblerResult = VectorAssembler (inputCols = ["features1", "features2"], outputCol = "features")
+# Create the pipe
+pipelineResult = Pipeline ()
+# Define the stages of which the pipe is composed
+pipelineResult.setStages ([pipeline12, pipeline34, assemblerResult])
+
+# Pipe fit model with input 'df' data
+modelResult = pipelineResult.fit (df)
+# Make the transformation of the data using the model
+result_df = modelResult.transform (df)
+# Show results
+#display (result_df).
+
+
+It is a process comprised of several sequential phases, each output being the input of the previous one, without losing data and knowledge.
+-Transformer (aggregation)
+-Estimator (learn and apply the state).
+Pipeline Model
+
+    Data sampling
+    Features Engineering
+    Function transformations
+    function processing
+    Encoders
+    Selection of characteristics
+    Subsampling
+    Subset of Data
+    Evaluation
+    Metrics
+    Calibration
+    Display
+
