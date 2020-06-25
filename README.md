@@ -9,104 +9,172 @@
 <br><strong>Ingeniería en Tecnologías de la Información y Comunicaciones</strong>
 <br><strong>Ingeniería Informatica</strong>
 <br><strong>Materia: Datos Masivos</strong>
-<br><strong>Unidad: 3</strong>
+
+<br><strong>Unidad: 2</strong>
+
 <br><strong>Dorado Aguilus Ruben #15210328</strong>
    <br><strong>Mejia Manriquez Rocio #14212336</strong>
 <br><strong>Docente: Dr. Jose Christian Romero Hernandez</strong>
 </p>
 
-### Unidad3
+ 
+### Unidad2
+<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad2/Tareas ">Homework</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Tareas/regrecion.scala  ">Linear Regrecion</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Tareas/PIPELINE ">Pipeline</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Tareas/CONFUSION%20MATRIX ">Confusion matrix</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Tareas/Algorithms%20in%20Machine%20Learning ">Algo M.L</a>
+
+
+
+<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad2 ">Unidad: 2</a>
+
+<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad2/Tareas ">TAREAS</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Tareas/regrecion.scala  ">Regrecion linial</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Tareas/PIPELINE ">Pipeline</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Tareas/CONFUSION%20MATRIX ">Confusion matrix</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Tareas/Algorithms%20in%20Machine%20Learning ">Algoritmos M.L</a>
+
+<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad2">EXAMEN</a>
+<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad2/Examen-iris">Examen-iris</a>
+
+<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad2/Exposiciones">Expociciones</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Exposiciones/LSVM.scala">Linear support vector machine</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Exposiciones/LR.scala">Logistic Regression</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Exposiciones/DT.scala">Decision Tree Classifier</a>
+<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad2/Exposiciones/MLP.scala">Multilayer perceptron classifier</a>
+
 
 This document contains exercises and practices of the kind of massive data taught in the technology of 
 Tijuana taught by Dr. Cristian Romero.
 the practices are taught in Spark in scala documents with a staggered learning system.
 
+### Exam Unit2
 
-<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad3 ">Unidad: 3</a>
-
-<li><a href="https://github.com/rubens084/Bigdata/tree/Unidad3/Examen">Exam</a>
-<li><a href="https://github.com/rubens084/Bigdata/blob/Unidad3/Examen/ExamenU3.scala">Wholesale customers</a>
-
-#Exam code
-
-Implement scala.Serializable, java.io.Closeable, Logging
-The entry point to Spark programming with the Dataset and DataFrame API.
-In environments this has been created in advance (eg REPL, notebooks)
+We add the necessary libraries to work with the algorithm Multilayer Perceptron.
+Multilayer Perceptron Classifier (MLPC) is a neural network based classifier
+artificial direct feeding. MLPC consists of multiple layers of nodes. Each layer is
+fully connected to the next layer in the network.
 ```
-import org.apache.spark.sql.SparkSession
-allows to hide some alerts
-import org.apache.log4j._
-Logger.getLogger("org").setLevel(Level.ERROR)
-
+import org.apache.spark.ml.classification.MultilayerPerceptronClassifier
 ```
-Is useful when applications want to share a SparkContext.
-So yes, you can use it to share a SparkContext object between applications.
-Yes, you can reuse broadcast variables and temporary tables in all parts.
+Public class MulticlassClassificationEvaluator extends the evaluator implements DefaultParamsWritable
+Evaluator for multiclass classification, which expects two input columns: prediction and label.
 ```
-val spark = SparkSession.builder().getOrCreate()
+import org.apache.spark.ml.evaluation.MulticlassClassificationEvaluator
 ```
-
-k-means is one of the most widely used grouping algorithms that groups data points
-in a predefined number of clusters. The MLlib implementation includes a parallel variant
-of the k-means ++ method called kmeans ||.
-KMeans is implemented as an Estimator and generates a KMeansModel as the base model.
-```
-import org.apache.spark.ml.clustering.KMeans
-```
-The data from the Wholesale Customers data.csv dataser is loaded in the variable "data"
-```
-val data  = spark.read.option("header","true").option("inferSchema", "true").format("csv").load("Wholesale customers data.csv")
-```
-the columns are selected: Fresh, Milk, Groceries, Frozen, Detergents_Paper, Delicassen. and we proceed to create a set called feature_data
-```
-val feature_data = data.select($"Fresh", $"Milk", $"Grocery", $"Frozen", $"Detergents_Paper", $"Delicassen")
-```
-This section covers algorithms for working with features, roughly divided into these groups:
-Extraction: extraction of "raw" data characteristics
-Transformation: scale, convert or modify features
-Selection: select a subset of a larger feature set
-Locality Sensitive Hashing (LSH): This class of algorithms combines aspects of feature transformation with other algorithms.
+From the data set Iris.cvs, elaborate the necessary data cleaning by means of a scrip in scala spark,
+we import the necessary libraries for cleaning.
+A feature transformer that combines multiple columns into one vector column.
+This requires one pass over the entire dataset. In case we need to infer
+column lengths from the data, we require an additional call to the 'first' method
+dataset, see parameter 'handleInvalid'.
 ```
 import org.apache.spark.ml.feature.VectorAssembler
 ```
+converts a single column to an index column (similar to a factor column in R)
+```
+import org.apache.spark.ml.feature.{VectorAssembler, StringIndexer}
+```
 Factory methods for working with vectors. Note that dense vectors simply
-are rendered as NumPy array objects, so there is no need to convert them to use them in
+they are rendered as NumPy array objects, so there is no need to convert them to use them in
 MLlib. For sparse vectors, the factory methods in this class create a type compatible with MLlib,
-or users can pass the column vectors scipy.sparse from SciPy.
+or users can pass the scipy.sparse column vectors from SciPy.
 ```
 import org.apache.spark.ml.linalg.Vectors
 ```
-a new Vector Assembler object is created for the columns: Fresh, Milk, Grocery, Frozen, Detergents_Paper, Delicassen. as an input set.
+The data from the dataser iris.csv is loaded in the variable "data"
 ```
-val assembler = new VectorAssembler().setInputCols(Array("Fresh", "Milk", "Grocery", "Frozen", "Detergents_Paper", "Delicassen")).setOutputCol("features")
+val data  = spark.read.option("header","true").option("inferSchema", "true").format("csv").load("iris.csv")
 ```
-VectorAssembler is a transformer that combines a given list of columns into a single vector column.
-It is useful to combine raw features and features generated by different feature transformers in one
-vector of individual characteristics, to train ML models such as logistic regression and decision trees. VectorAssembler
-accepts the following types of input columns: all numeric types, boolean type and vector type. In every row
-the values of the input columns will be concatenated into a vector in the specified order.
+Null fields are removed drop rows that have null only in column onlyColumnInOneColumnDataFrame.
 ```
-val training_data = assembler.transform(feature_data).select($"features")
+val dataClean = data.na.drop()
 ```
-k-means is one of the most widely used grouping algorithms that groups data points into
-a predefined number of clusters. The MLlib implementation includes a parallel variant of the k-means ++ method called kmeans ||.
-KMeans is implemented as an Estimator and generates a KMeansModel as the base model.
+shows the name of the columns
 ```
-val kmeans = new KMeans().setK(3).setSeed(1L)
-val model = kmeans.fit(training_data)
+data.schema.names
 ```
-MLlib supports grouping of k-means, one of the most widely used grouping algorithms that groups data points into predefined values
-number of groups. The MLlib implementation includes a parallel variant of the k-means ++ method called kmeans ||.
+We see the scheme to check that all the values ​​are correctly classified in the dataset
 ```
-val WSSEw = model.computeCost(training_data)
-println(s"Within set sum of Squared Errors = $WSSEw")
+data.printSchema()
 ```
-###Show the result.
+the first 5 values of the list are shown with their data in a table
 ```
-println("Cluster Centers: ")
-model.clusterCenters.foreach(println)
+data.show(5)
+```
+The DESCRIBE FUNCTION statement returns the basic metadata information of an existing function.
+The metadata information includes the function name, implementation class, and usage details.
+If the optional EXTENDED option is specified, the basic metadata information is returned along with the extended usage information.
+```
+data.describe().show
+```
+A vector is declared that transforms the data to the variable "features" This section covers algorithms for working with features, <li> roughly divided into these groups:
+Extraction: extraction of "raw" data characteristics, Transformation: scale, convert or modify characteristics Selection: select a subset of a larger set of characteristics
+
+```
+val vectorFeatures = (new VectorAssembler().setInputCols(Array("sepal_length","sepal_width", "petal_length","petal_width")).setOutputCol("features"))
 ```
 
+Features are transformed using the dataframe
+```
+val features = vectorFeatures.transform(dataClean)
+```
+A "StringIndexer" is declared that transforms the data in "species" into numerical data
+```
+val speciesIndexer = new StringIndexer().setInputCol("species").setOutputCol("label")
+```
+We adjust the indexed species with the vector features
+```
+val dataIndexed = speciesIndexer.fit(features).transform(features)
+```
+With the variable "splits" we make a cut randomly 60% is used
+of the dataset in training and 40% in test, a random cut with a seed of 1234 is used
+```
+val splits = dataIndexed.randomSplit(Array(0.6, 0.4), seed = 1234L)
+```
+The variable "train" is declared which will have 60% of the data in the position
+(0) containing 60%
+```
+val train = splits(0)
+```
+The variable "test" is declared which will have 40% of the data in the potion (1)
+with the remaining 40% of the data set
 
+```
+val test = splits(1)
+```
+The configuration of the layers for the artificial neural network model is established
+```
+val layers = Array[Int](4, 2, 2, 3)
+```
+The Multilayer algorithm trainer is configured with their respective parameters
+```
+val trainer = new MultilayerPerceptronClassifier().setLayers(layers).setBlockSize(128).setSeed(1234L).setMaxIter(100)
+```
+Model is trained with training data
+```
+val model = trainer.fit(train)
+```
+They are tested already trained the model
+```
+val result = model.transform(test)
+```
+Select the prediction and the label that will be stored in the variable
+```
+val predictionAndLabels = result.select("prediction", "label")
+```
+Some data is displayed 
+```
+predictionAndLabels.s```how()
+```
+Model precision estimation runs
+```
+val evaluator = new 
+```
+
+This document contains exercises and practices of the kind of massive data taught in the technology of 
+Tijuana taught by Dr. Cristian Romero.
+the practices are taught in Spark in scala documents with a staggered learning system.
 
 
