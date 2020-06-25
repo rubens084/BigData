@@ -9,12 +9,13 @@
 <br><strong>Ingeniería en Tecnologías de la Información y Comunicaciones</strong>
 <br><strong>Ingeniería Informatica</strong>
 <br><strong>Materia: Datos Masivos</strong>
+
 <br><strong>Unidad: 2</strong>
+
 <br><strong>Dorado Aguilus Ruben #15210328</strong>
    <br><strong>Mejia Manriquez Rocio #14212336</strong>
 <br><strong>Docente: Dr. Jose Christian Romero Hernandez</strong>
 </p>
-
 
  
 ### Unidad2
@@ -98,7 +99,7 @@ We see the scheme to check that all the values ​​are correctly classified in
 ```
 data.printSchema()
 ```
-the first 5 values ​​of the list are shown with their data in a table
+the first 5 values of the list are shown with their data in a table
 ```
 data.show(5)
 ```
@@ -172,13 +173,8 @@ Model precision estimation runs
 val evaluator = new 
 ```
 
-MulticlassClassificationEvaluator (). SetLabelCol ("label"). SetPredictionCol ("prediction"). SetMetricName ("accuracy")
-```
-val accuracy = evaluator.evaluate(predictionAndLabels)
-```
-Model error prints
-```
-println(s"Test Error = ${(1.0 - accuracy)}")
-```
+This document contains exercises and practices of the kind of massive data taught in the technology of 
+Tijuana taught by Dr. Cristian Romero.
+the practices are taught in Spark in scala documents with a staggered learning system.
 
 
